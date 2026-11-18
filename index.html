@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NEXUS Hardware — componentes e PCs para montar seu setup gamer.">
+  <meta name="theme-color" content="#08090d">
+  <title>NEXUS Hardware | Seu setup, seu próximo nível</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-bar">⚡ NEXUS HARDWARE <span>•</span> Tecnologia para o seu próximo nível</div>
+
+  <header class="navbar">
+    <a class="logo" href="#inicio" aria-label="NEXUS Hardware início">
+      <span class="logo-icon">N</span><span>NEXUS<span class="logo-red">HW</span></span>
+    </a>
+
+    <form class="search-form" id="search-form">
+      <input id="search-bar" type="search" placeholder="Buscar processador, placa de vídeo, memória..." aria-label="Buscar produtos">
+      <button type="submit" aria-label="Buscar">⌕</button>
+    </form>
+
+    <div class="nav-actions">
+      <button class="icon-button" id="theme-btn" type="button" aria-label="Alternar tema">☼</button>
+      <button class="cart-button" type="button" onclick="toggleCartModal(true)">🛒 <span>Carrinho</span> <b id="cart-count">0</b></button>
+      <button class="menu-button" id="menu-button" type="button" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <nav class="main-nav" id="main-nav">
+    <a href="#inicio">Início</a>
+    <a href="#pecas">Peças</a>
+    <a href="#computadores">PCs Gamer</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#suporte">Suporte</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-grid"></div>
+      <div class="hero-copy">
+        <span class="eyebrow"><i></i> PERFORMANCE COMEÇA AQUI</span>
+        <h1>Seu setup no<br><span>próximo nível.</span></h1>
+        <p>Encontre componentes, monte seu computador e tire suas dúvidas com a NEXUS AI.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#computadores">Explorar PCs <span>→</span></a>
+          <a class="btn btn-outline" href="#pecas">Ver componentes</a>
+        </div>
+        <div class="hero-points">
+          <span>✓ Ajuda para escolher peças</span>
+          <span>✓ Catálogo organizado</span>
+          <span>✓ Atendimento NEXUS AI</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <img src="https://images.tcdn.com.br/img/img_prod/591628/gabinete_gamer_c3tech_aquarius_frontal_e_lateral_em_vidro_usb_3_0_preto_mt_g810bk_40981_1_026f1e130aaf7060d52ab56732408c4d.jpg" alt="Gabinete gamer estilo aquário com iluminação RGB" onerror="this.style.display='none'">
+        <div class="hero-chip">NEXUS <b>HARDWARE</b></div>
+      </div>
+    </section>
+
+    <section class="brand-strip" aria-label="Categorias de hardware">
+      <span>HARDWARE PARA SEU SETUP</span><b>AMD</b><b>RADEON</b><b>ASUS</b><b>KINGSTON</b><b>GAMING</b>
+    </section>
+
+    <section class="section" id="computadores">
+      <div class="section-heading">
+        <div><span class="eyebrow">MÁQUINAS</span><h2>PCs para jogar e criar</h2><p>Confira as configurações e peça uma cotação.</p></div>
+        <span class="section-count">01 / COMPUTADORES</span>
+      </div>
+      <div class="product-grid" id="pc-grid"></div>
+    </section>
+
+    <section class="section section-muted" id="pecas">
+      <div class="section-heading">
+        <div><span class="eyebrow">COMPONENTES</span><h2>Monte do seu jeito</h2><p>Peças selecionadas para você planejar seu computador.</p></div>
+        <span class="section-count">02 / PEÇAS</span>
+      </div>
+      <div class="filter-row" aria-label="Filtrar componentes">
+        <button class="filter-button active" data-filter="todos">Todos</button>
+        <button class="filter-button" data-filter="processador">Processadores</button>
+        <button class="filter-button" data-filter="placa de vídeo">Placas de vídeo</button>
+        <button class="filter-button" data-filter="placa-mãe">Placas-mãe</button>
+        <button class="filter-button" data-filter="memória">Memória RAM</button>
+        <button class="filter-button" data-filter="armazenamento">SSD</button>
+        <button class="filter-button" data-filter="gabinete">Gabinetes</button>
+        <button class="filter-button" data-filter="monitor">Monitores</button>
+      </div>
+      <div class="product-grid" id="parts-grid"></div>
+      <p class="catalog-note">* Alguns modelos e imagens são referências visuais. Confirme marca, modelo, preço e disponibilidade antes de comprar.</p>
+    </section>
+
+    <section class="ai-banner" id="sobre">
+      <div class="ai-symbol">✳</div>
+      <div><span class="eyebrow">ASSISTENTE INTELIGENTE</span><h2>Não sabe qual peça escolher?</h2><p>Converse com a NEXUS AI para tirar dúvidas, comparar componentes e entender compatibilidade.</p></div>
+      <button class="btn btn-primary" type="button" onclick="toggleChat(true)">Conversar com a NEXUS AI <span>↗</span></button>
+    </section>
+
+    <section class="info-grid" id="suporte">
+      <article class="info-card"><span>01</span><div class="info-icon">🧩</div><h3>Ajuda com compatibilidade</h3><p>Receba orientação para conferir processador, placa-mãe, memória, fonte e gabinete.</p></article>
+      <article class="info-card"><span>02</span><div class="info-icon">🎮</div><h3>PC para seu orçamento</h3><p>Explique quanto pretende gastar e quais jogos ou programas deseja usar.</p></article>
+      <article class="info-card"><span>03</span><div class="info-icon">🛠️</div><h3>Suporte ao cliente</h3><p>Use o chat para dúvidas iniciais ou fale com a equipe pelos canais cadastrados.</p></article>
+    </section>
+
+    <section class="contact-section" id="contato">
+      <div><span class="eyebrow">FALE COM A NEXUS</span><h2>Vamos montar seu próximo setup?</h2><p>Envie sua dúvida. O formulário abaixo é demonstrativo até ser conectado a um serviço de atendimento.</p></div>
+      <form id="contact-form" class="contact-form">
+        <label for="contact-name">Seu nome</label>
+        <input id="contact-name" type="text" placeholder="Como podemos te chamar?" required>
+        <label for="contact-email">Seu e-mail</label>
+        <input id="contact-email" type="email" placeholder="voce@email.com" required>
+        <label for="contact-message">Mensagem</label>
+        <textarea id="contact-message" rows="3" placeholder="Escreva sua dúvida..." required></textarea>
+        <button class="btn btn-primary" type="submit">Enviar mensagem</button>
+        <p id="contact-feedback" class="form-feedback" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="logo" href="#inicio"><span class="logo-icon">N</span><span>NEXUS<span class="logo-red">HW</span></span></a>
+    <p>Seu setup, seu próximo nível.</p>
+    <small>© 2026 NEXUS Hardware. Projeto demonstrativo — preços, estoque, frete e pagamentos ainda não estão conectados.</small>
+  </footer>
+
+  <!-- Carrinho lateral -->
+  <div class="overlay" id="cart-overlay" onclick="toggleCartModal(false)"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Carrinho de compras">
+    <div class="drawer-header"><div><span class="eyebrow">SEU PEDIDO</span><h2>Carrinho</h2></div><button class="close-button" type="button" onclick="toggleCartModal(false)">✕</button></div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-bottom"><p id="cart-summary">Os preços serão informados pela equipe.</p><button class="btn btn-primary full" type="button" onclick="openCheckout()">Solicitar orçamento</button><small>O carrinho é demonstrativo e não realiza pagamentos.</small></div>
+  </aside>
+
+  <!-- Modal de produto -->
+  <div class="modal-overlay" id="product-modal" onclick="if(event.target === this) closeProductModal()">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="close-button modal-close" type="button" onclick="closeProductModal()">✕</button>
+      <img id="modal-img" src="" alt="">
+      <div class="modal-details"><span class="eyebrow">DETALHES DO PRODUTO</span><h2 id="modal-title"></h2><p id="modal-desc"></p><p class="price-label">Preço: <strong>A consultar</strong></p><button class="btn btn-primary full" id="modal-add-btn" type="button">Adicionar ao carrinho</button></div>
+    </div>
+  </div>
+
+  <!-- Modal de orçamento -->
+  <div class="modal-overlay" id="checkout-modal" onclick="if(event.target === this) closeCheckout()">
+    <div class="modal-card checkout-card" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+      <button class="close-button modal-close" type="button" onclick="closeCheckout()">✕</button>
+      <span class="eyebrow">ÚLTIMA ETAPA</span><h2 id="checkout-title">Solicitar orçamento</h2>
+      <form id="checkout-form">
+        <label for="ck-nome">Nome</label><input id="ck-nome" type="text" required>
+        <label for="ck-email">E-mail</label><input id="ck-email" type="email" required>
+        <label for="ck-telefone">Telefone (opcional)</label><input id="ck-telefone" type="tel" placeholder="(00) 00000-0000">
+        <button class="btn btn-primary full" type="submit">Gerar resumo do pedido</button>
+      </form>
+      <div id="ck-sucesso" class="success-message" hidden></div>
+    </div>
+  </div>
+
+  <!-- Chat da NEXUS AI -->
+  <section class="chat-widget" aria-label="Chat da NEXUS AI">
+    <div class="chat-window" id="chat-window" aria-live="polite">
+      <div class="chat-header"><div class="chat-avatar">N</div><div><strong>NEXUS AI</strong><small><i></i> Assistente virtual</small></div><button type="button" onclick="toggleChat(false)" aria-label="Fechar chat">✕</button></div>
+      <div class="chat-messages" id="chat-messages"><div class="bot-message">Olá! Eu sou a NEXUS AI. Posso ajudar com peças, compatibilidade e montagem de PCs. O que você gostaria de saber?</div></div>
+      <div class="chat-suggestions"><button type="button" onclick="sendSuggestion('Quais peças tem no catálogo?')">Ver catálogo</button><button type="button" onclick="sendSuggestion('Essas peças são compatíveis?')">Compatibilidade</button><button type="button" onclick="sendSuggestion('Me ajude a montar um PC gamer.')">Montar PC</button></div>
+      <form class="chat-form" id="chat-form" onsubmit="sendMessage(event)"><input id="chat-input" type="text" placeholder="Digite sua pergunta..." autocomplete="off" maxlength="1000" required><button type="submit" aria-label="Enviar mensagem">➤</button></form>
+      <small class="chat-privacy">As mensagens são enviadas ao serviço de IA configurado no servidor.</small>
+    </div>
+    <button class="chat-launcher" type="button" onclick="toggleChat()"><span>✳</span><b>Fale com a NEXUS AI</b></button>
+  </section>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
